@@ -1,0 +1,49 @@
+const nome = prompt('Digite o nome do cliente')
+
+const sobrenome = prompt('Digite o sobrenome do cliente')
+
+const idade = prompt('Digite a idade do cliente')
+
+if (idade <=10){
+    const precoingresso = 10
+    console.log('O filme indicado são os de categoria Verde')
+    console.log(`O valor do ingresso é: ${precoingresso}`)
+    const valorPago = prompt('Digite o valor pago')
+    const troco = parseFloat(valorPago)-parseInt(precoingresso)
+    console.log(`O seu troco é: ${troco}`)
+}else if(idade <=12){
+    const precoingresso = 15
+    console.log('O filme indicado são os de categoria Azul e Livre')
+    console.log(`O valor do ingresso é: ${precoingresso}`)
+    const valorPago = prompt('Digite o valor pago')
+    const troco = parseFloat(valorPago)-parseInt(precoingresso)
+    console.log(`O seu troco é: ${troco}`)
+}else if(idade <=14){
+    const precoingresso = 20
+    console.log('O filme indicado são os de categoria Amarelo, Azul e Livre')
+    console.log(`O valor do ingresso é: ${precoingresso}`)
+    const valorPago = prompt('Digite o valor pago')
+    const troco = parseFloat(valorPago)-parseInt(precoingresso)
+    console.log(`O seu troco é: ${troco}`)
+}else if(idade <=16){
+    const precoingresso = 25
+    console.log('O filme indicado são os de categoria Laranja, Amarelo, Azul e Livre')
+    console.log(`O valor do ingresso é: ${precoingresso}`)
+    const valorPago = prompt('Digite o valor pago')
+    const troco = parseFloat(valorPago)-parseInt(precoingresso)
+    console.log(`O seu troco é: ${troco}`)
+}else if(idade <=18){
+    const precoingresso = 30
+    console.log('O filme indicado são os de categoria Vermelho, Laranja, Amarelo, Azul e Livre')
+    console.log(`O valor do ingresso é: ${precoingresso}`)
+    const valorPago = prompt('Digite o valor pago')
+    const troco = parseFloat(valorPago)-parseInt(precoingresso)
+    console.log(`O seu troco é: ${troco}`)
+}else if (idade > 18){
+    const precoingresso = 32
+    console.log('Sem restrição')
+    console.log(`O valor do ingresso é: ${precoingresso}`)
+    const valorPago = prompt('Digite o valor pago')
+    const troco = parseFloat(valorPago)-parseInt(precoingresso)
+    console.log(`O seu troco é: ${troco}`)
+}

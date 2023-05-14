@@ -1,0 +1,47 @@
+const nome = prompt('Digite o seu nome:')
+
+const anoNasc = parseInt(prompt('Digite o ano de nascimento:'))
+
+const anoAtual = new Date().getFullYear();
+
+const sexo = prompt('Você é Homem(H) ou Mulher(M) ?')
+
+const altura = parseFloat(prompt('Digite a sua altura:'))
+const alturaMinima = 1.60
+
+function calcularIdade(anoAtual,anoNasc) {
+    const idade = anoAtual - anoNasc
+    return idade
+}
+
+function verificacaoExercito(idade,sexo,altura){
+
+    let aprovacaoAltura = false;
+    let aprovacaoIdade = false;
+    let aprovacaoSexo = false;
+
+    if(sexo == 'H' || sexo == "h"){
+        aprovacaoSexo = true
+    }
+    if(altura >= alturaMinima){
+        aprovacaoAltura = true
+    }
+
+    if(idade >= 18 && idade <=24){
+        aprovacaoIdade = true
+    }
+    if(aprovacaoAltura && aprovacaoIdade && aprovacaoSexo){
+        return true;
+    }
+
+    return false
+}
+
+const idade = calcularIdade(anoAtual, anoNasc);
+const apto = verificacaoExercito(idade,sexo,altura);
+
+if(apto){
+    console.log(`${nome} está apto a servir o Exercito Brasileiro`);
+}else {
+    console.log(`${nome} não esta apto a servir o Exercito Brasileiro`);
+}

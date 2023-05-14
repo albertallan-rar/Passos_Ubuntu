@@ -1,0 +1,13 @@
+const quantidadeFileira = prompt('Digite a quantidade de fileiras na sala')
+
+const cadeirasFileira = prompt('Digite a quantidade de cadeiras por fileira')
+
+for(let f=1;f <= quantidadeFileira;f++){
+    console.log(`ocupação da fileira nº${f} iniciada`)
+    for(let c=1;c <= cadeirasFileira;c++){
+        console.log(`cadeira nº${c} ocupada da fileira nº${f}`)
+        if(c== cadeirasFileira && f == quantidadeFileira){
+            console.log('Todas as cadeiras foram ocupadas')
+        }
+    }
+}

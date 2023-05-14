@@ -1,0 +1,11 @@
+const listaCompras = [
+    'Leite Condensado',
+    'Leite',
+    'Ovo',
+    'Açucar'
+]
+
+listaCompras.splice(1,1)
+listaCompras.pop()
+listaCompras.splice(0,1)
+listaCompras.shift()

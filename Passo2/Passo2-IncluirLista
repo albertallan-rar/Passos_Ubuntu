@@ -1,0 +1,12 @@
+const meusFilmes = [
+    'Basquete Blues',
+    'O Labirinto do Fauno',
+    'Dançando na Chuva',
+    'Casablanca',
+    'O Poderoso Chefão',
+    'Cidadão Kane',
+]
+
+meusFilmes.push('Tropa Estelares')
+
+console.log(meusFilmes)

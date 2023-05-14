@@ -1,0 +1,22 @@
+const nome = prompt('Digite o nome do cliente:')
+
+const idade = parseInt(prompt('Digite a idade do cliente:'))
+
+const estudante = confirm('O cliente é estudante ?')
+
+function comprarIngresso(nome,idade,estudante){
+    const precoBase = 20;
+    let precoFinal = precoBase;
+
+    if (idade >=64){
+        precoFinal *= 0.8;
+    }else if(idade < 18 || estudante){
+        precoFinal *= 0.9;
+    }else{
+        precoFinal = precoBase
+    }
+    
+    console.log(`Parabéns, ${nome}! Você comprou seu ingresso de cinema por R$${precoFinal.toFixed(2)}.Bom Filme`)
+}
+
+comprarIngresso(nome,idade,estudante)

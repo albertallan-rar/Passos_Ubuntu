@@ -1,0 +1,26 @@
+const idade = parseInt(prompt('Digite a idade do cliente'))
+
+const estudante = confirm('É estudante ?')
+
+class Ingresso {
+  constructor(precoBase) {
+    this.precoBase = precoBase;
+  }
+
+  calcularPrecoFinal(idade, estudante) {
+    let precoFinal = this.precoBase;
+
+    if (idade >= 64) {
+      precoFinal *= 0.8;
+    } else if (idade < 18 || estudante) {
+      precoFinal *= 0.9;
+    }
+
+    return precoFinal;
+  }
+}
+
+const ingressoPadrao = new Ingresso(20);
+const precoFinalPadrao = ingressoPadrao.calcularPrecoFinal(idade, estudante);
+
+console.log(`Parabens, você comprou um ingresso por ${precoFinalPadrao}`)

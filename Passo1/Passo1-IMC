@@ -1,0 +1,34 @@
+const Nome = prompt('Digite o seu nome')
+
+const Sobrenome= prompt('Digite o seu sobrenome')
+
+const altura = prompt('Digite a sua altura')
+
+const peso = prompt('Digite o seu peso')
+
+const IMC = parseInt(peso)/(parseFloat(altura) * parseFloat(altura))
+
+if (IMC >= 40){
+    console.log(`${Nome} ${Sobrenome} o resultado do seu IMC foi:${IMC}`)
+    console.log('Obesidade III')
+} else if(IMC >=35){
+    console.log(`${Nome} ${Sobrenome} o resultado do seu IMC foi:${IMC}`)
+    console.log('Obesidade II')
+}else if(IMC >=30){
+    console.log(`${Nome} ${Sobrenome} o resultado do seu IMC foi:${IMC}`)
+    console.log('Obesidade I')
+}else if(IMC >=25){
+    console.log(`${Nome} ${Sobrenome} o resultado do seu IMC foi:${IMC}`)
+    console.log('Acima do peso')
+}else if(IMC >=18.50){
+    console.log(`${Nome} ${Sobrenome} o resultado do seu IMC foi:${IMC}`)
+    console.log('Peso normal')
+}else if(IMC >=17){
+    console.log(`${Nome} ${Sobrenome} o resultado do seu IMC foi:${IMC}`)
+    console.log('Abaixo do peso')
+}else if(IMC < 17){
+    console.log(`${Nome} ${Sobrenome} o resultado do seu IMC foi:${IMC}`)
+    console.log('Muito abaixo do peso')
+}else{
+    console.log('valor invalido')
+}
